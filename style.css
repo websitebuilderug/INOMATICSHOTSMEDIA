@@ -25,6 +25,9 @@ html {
 body {
   padding: 1em;
   background-color: var(--base-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
@@ -181,6 +184,7 @@ details p {
 footer {
   padding-bottom: 1.5em;
   text-align: center;
+  margin-top: auto;
 }
 
 footer a {
@@ -195,21 +199,26 @@ footer a:hover {
 
 .site-footer {
   text-align: center;
-  padding: 1.25em 0;
+  padding: 2em 0 1.25em 0;
+  margin: 3em auto 0;
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-1) 0%, var(--color-2) 100%);
+  border-top: 2px solid var(--primary-color);
 }
 
 .site-footer .social {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  margin: 0 .5em;
+  width: 50px;
+  height: 50px;
+  margin: 0 .75em;
   border-radius: 50%;
   color: #111;
-  background: transparent;
+  background: white;
   text-decoration: none;
-  transition: transform .15s ease, box-shadow .15s ease;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .site-footer .instagram { color: #E4405F; }
@@ -217,22 +226,29 @@ footer a:hover {
 .site-footer .email     { color: var(--text-color); }
 
 .site-footer .social svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   fill: currentColor;
   display: block;
 }
 
 .site-footer .social:hover,
 .site-footer .social:focus {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
   outline: none;
+  background-color: var(--primary-color);
+}
+
+.site-footer .social:hover svg,
+.site-footer .social:focus svg {
+  color: white;
 }
 
 .site-footer .social:focus {
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
+  box-shadow: 0 0 0 4px rgba(255, 192, 110, 0.3), 0 8px 16px rgba(0,0,0,0.15);
 }
+
 @media(max-width: 900px){
   header {
     text-align: center;
@@ -273,5 +289,10 @@ footer a:hover {
   
   h2 {
     font-size: 1.5rem;
+  }
+  
+  .site-footer .social {
+    width: 44px;
+    height: 44px;
   }
 }
