@@ -155,13 +155,13 @@ section#my-work {
   display: block;
   height: 100%;
   width: 100%;
-  insert: 0;
+  inset: 0;
   object-fit: cover;
   border-radius: .5em;
   transition: transform 0.25s ease;
 }
 
-.grid-containter a:hover img {
+.grid-container a:hover img {
  transform: scale(1.05);
 }
 
@@ -259,7 +259,7 @@ footer a:hover {
   }
 }
 
-@media(max-widith: 480px) {
+@media(max-width: 480px) {
   nav li {
     display: none;
   }
